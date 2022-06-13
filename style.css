@@ -1,0 +1,28 @@
+button
+{
+	padding: 0;
+    background: transparent;
+    border: 0;
+}
+#r,
+#p,
+#s
+{
+	width: 100px;
+	height: 100px;
+}
+#r
+{
+	background-image : url(./img/rock.png);
+	background-size: contain;
+}
+#p
+{
+	background-image : url(./img/paper.png);
+	background-size: contain;
+}
+#s
+{
+	background-image : url(./img/scissor.png);
+	background-size: contain;
+}
