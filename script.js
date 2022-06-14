@@ -89,7 +89,11 @@ function anounceWinner(lwin,llose)
     {
         outString+="lost";
     }
-    outString+=(" "+win+"-"+lose+" with "+tie+" ties");
+    outString+=(" "+win+"-"+lose+" with "+tie+" tie");
+    if(tie!=1)
+    {
+        outString+"s";
+    }
     win=0;
     lose=0;
     tie=0;
