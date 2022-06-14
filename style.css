@@ -23,6 +23,23 @@ button
 }
 #s
 {
-	background-image : url(./img/scissor.png);
+	background-image : url(./img/scissors.png);
 	background-size: contain;
+}
+body {
+	background-image: url("./img/background.png");
+   }
+p
+{
+	color: black;
+	background-color: white;
+}
+#pics{
+    width:100px; /* you can use % */
+    height: auto;
+	background-color: transparent;
+}
+#imgRes
+{
+	background-color: transparent;
 }

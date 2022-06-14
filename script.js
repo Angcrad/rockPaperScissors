@@ -1,6 +1,7 @@
 let win=0;
 let lose=0;
 let tie=0;
+let htmlStr="";
 const rockBtn=document.getElementById("r");
 const paperBtn=document.getElementById("p");
 const scissorBtn=document.getElementById("s");
@@ -57,6 +58,10 @@ function game(playerSelection)
                 //i--;
                 break;
         }
+        htmlStr="";
+        htmlStr+="<img id=\"pics\" src=\"./img/"+playerSelection+".png\">";
+        htmlStr+="<img id=\"pics\" src=\"./img/r"+computerSelection+".png\">";
+        document.getElementById("imgRes").innerHTML=htmlStr;
         if(win===5||lose===5)
         {
             anounceWinner(win,lose);
@@ -92,13 +97,14 @@ function anounceWinner(lwin,llose)
     outString+=(" "+win+"-"+lose+" with "+tie+" tie");
     if(tie!=1)
     {
-        outString+"s";
+        outString+="s";
     }
     win=0;
     lose=0;
     tie=0;
     alert(outString);
     document.getElementById("status").innerText="";
+    document.getElementById("imgRes").innerHTML="";
     document.getElementById("win").innerText="wins: 0";
     document.getElementById("lose").innerText="loses: 0";
     document.getElementById("tie").innerText="ties: 0";
@@ -164,3 +170,4 @@ function getRandomInt(max)
     {
         return Math.floor(Math.random() * max);
     }
+    
